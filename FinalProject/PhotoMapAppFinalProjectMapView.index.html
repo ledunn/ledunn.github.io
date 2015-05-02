@@ -69,16 +69,9 @@
 
 
 
-<div id="content">  
+<!-- <div id="content">   --> 
 
-<!--Below are clickable links that allow filtering by decade with jQuery-->
-
-
-<a href="#" id="1940s_button">1940s</a>
-<a href="#" id="1950s_button">1950s</a>
-<a href="#" id="1960s_button">1960s</a>
-<a href="#" id="1970s_button">1970s</a>
-<a href="#" id="All_Photos_button">All Photos</a>   
+  
 <!---------------------------------------///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -310,7 +303,8 @@ function initialize() {
 
 <body>
 	<h1>
-		neighborhood.pictures
+		
+        <a href="PhotoMapAppFinalProjectMapView.index.html">neighborhood.pictures</a>
 	</h1>	
 	
 <!-- <h2>
@@ -329,12 +323,28 @@ function initialize() {
 
 
 <h2>
-    <a href="PhotoMapAppAboutPage.html">About</a>
+<div class="nav_bar_left">
+
+    <ul>
+    <li> <a href="PhotoMapAppAboutPage.html">About</a> </li>
+
+ <!--Below are clickable links that allow filtering by decade with jQuery-->
+
+
+    <li> <a href="#" id="1940s_button">1940s</a> </li>
+    <li> <a href="#" id="1950s_button">1950s</a> </li>
+    <li> <a href="#" id="1960s_button">1960s</a> </li>
+    <li> <a href="#" id="1970s_button">1970s</a> </li>
+    <li> <a href="#" id="All_Photos_button">All Photos</a> </li>
+    </ul>
+</div>
+
+
 </h2>
 
-<h2>
+<!-- <h2>
         <a href="PhotoMapAppFinalProjectPhotoIndex.html">Photo Index</a> 
-</h2>
+</h2> -->
 
 
 <div id="map_canvas" class="mapping"></div>
