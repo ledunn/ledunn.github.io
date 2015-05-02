@@ -39,27 +39,42 @@
 //     });
 
 
+   
+
    $(document).ready(function(){
     $("#1950s_button").click(function(){
-        $(".1940s, .1960s, .1970s").hide(1000);
+        $(".1940s, .1950s, .1960s, .1970s").show(300);
+        $(".1940s, .1960s, .1970s").hide(800);
     }); 
 
 
 
     $("#1960s_button").click(function(){
-       $(".1940s, .1950s, .1970s").hide(1000);
+        $(".1940s, .1950s, .1960s, .1970s").show(300);
+       $(".1940s, .1950s, .1970s").hide(800);
     });
 
      $("#1970s_button").click(function(){
-       $(".1940s, .1950s, .1960s").hide(1000);
+        $(".1940s, .1950s, .1960s, .1970s").show(300);
+       $(".1940s, .1950s, .1960s").hide(800);
     });
 
-      $("#All_Photos_button").click(function(){
+      
+
+       $("#All_Photos_button").click(function(){
        $(".1940s, .1950s, .1960s, .1970s").show(1000);
     });
 
+         $("#cars_button").click(function(){
+       
+       $(".1940s, .1950s, .1960s, .1970s").hide(300);
+       $(".cars").show(800);
+    });
+
+
        $("#1940s_button").click(function(){
-       $(".1950s, .1960s, .1970s").hide(1000);
+            $(".1940s, .1950s, .1960s, .1970s").show(300);
+         $(".1950s, .1960s, .1970s").hide(800);
     });
 
 });

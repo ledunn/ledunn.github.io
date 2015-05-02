@@ -44,17 +44,20 @@
 
    $(document).ready(function(){
     $("#1950s_button").click(function(){
-        $(".1940s, .1960s, .1970s").hide(1000);
+    	$(".1940s, .1950s, .1960s, .1970s").show(300);
+        $(".1940s, .1960s, .1970s").hide(800);
     }); 
 
 
 
     $("#1960s_button").click(function(){
-       $(".1940s, .1950s, .1970s").hide(1000);
+    	$(".1940s, .1950s, .1960s, .1970s").show(300);
+       $(".1940s, .1950s, .1970s").hide(800);
     });
 
      $("#1970s_button").click(function(){
-       $(".1940s, .1950s, .1960s").hide(1000);
+     	$(".1940s, .1950s, .1960s, .1970s").show(300);
+       $(".1940s, .1950s, .1960s").hide(800);
     });
 
       
@@ -63,9 +66,16 @@
        $(".1940s, .1950s, .1960s, .1970s").show(1000);
     });
 
+         $("#cars_button").click(function(){
+       
+       $(".1940s, .1950s, .1960s, .1970s").hide(300);
+       $(".cars").show(800);
+    });
+
 
        $("#1940s_button").click(function(){
-       $(".1950s, .1960s, .1970s").hide(1000);
+       	    $(".1940s, .1950s, .1960s, .1970s").show(300);
+		 $(".1950s, .1960s, .1970s").hide(800);
     });
 
 });
@@ -119,6 +129,7 @@
     <li> <a href="#" id="1960s_button">1960s</a> </li>
     <li> <a href="#" id="1970s_button">1970s</a> </li>
     <li> <a href="#" id="All_Photos_button">All Photos</a> </li>
+    <li> <a href="#" id="cars_button">Cars</a> </li>
     </ul>
 	
 	</div>
@@ -147,7 +158,7 @@
 
 				<a href="MapAppPhotos/SomervilleArchivesTumblr/3ParkStSomervilleJuly91968.jpg" class="fancybox" rel="gallery" title="July 9 1968 <br> 3 Park St, Somerville, Massachusetts"> 
 
-					<img class="fadein 1960s" src="MapAppPhotos/SomervilleArchivesTumblr/3ParkStSomervilleJuly91968.jpg"/>
+					<img class="fadein 1960s cars" src="MapAppPhotos/SomervilleArchivesTumblr/3ParkStSomervilleJuly91968.jpg"/>
 				</a>
 		
 			</li>
