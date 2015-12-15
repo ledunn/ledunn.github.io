@@ -1,0 +1,352 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>StormViewer</title>
+  <meta name="description" content="Storm Viewer: A Weather Data Visualization">
+
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="StormViewer.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.js"  charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+
+<div class="introText">
+	<h1>
+		StormViewer
+	</h1>
+
+		<p class="paragraphBlurb"> 
+			is an interactive project allowing you to explore the history of storms in the United States.
+		</p>
+
+
+	<img id="loadingRaincloud" src="Images/animated-rain-clouds-raincloud.gif">
+
+
+
+</div>
+
+
+
+
+<!-- <div class ="navLinks"> -->
+
+
+
+	<li class="navLinks"> 
+
+	<a href="addastorm.html">ADD A STORM
+	</a>
+
+	</li>
+
+
+
+	<li class="navLinks">
+	<a href="aboutstormviewer.html">
+	ABOUT STORMVIEWER
+	</a>
+	</li>
+
+
+	<li class="navLinks">
+	<a href="moreresources.html">
+	MORE RESOURCES
+	</a>
+
+	</li>
+
+
+
+
+
+
+
+
+<!-- </div> -->
+<ul>
+<script type="text/javascript">
+
+	/**************************************************************************/
+	/**************************************************************************/
+	/************************* global variables *******************************/
+	/**************************************************************************/
+	/**************************************************************************/
+
+	var dataset ; // global variable holding our data
+	var csv_file = 'StormEventsEditedFileColumnsDeleted.csv' ;
+	var debug = true ;
+
+	/**************************************************************************/
+	/**************************************************************************/
+	/**************************************************************************/
+	/**************************************************************************/
+	/**************************************************************************/
+
+	d3.csv(csv_file, function(data) {
+
+		if ( debug )
+			console.log ( 'csv file has loaded' ) ;
+
+		dataset = data;
+
+		draw_visualization () ;
+		hide_loading_animation () ;
+	});
+
+	function hide_loading_animation () {
+		if (debug)
+			console.log('hiding animation...') ;
+
+		// hide animation
+		$(document).ready(function () {
+			$("#loadingRaincloud").hide(3000);
+		});
+
+		// show Begin link
+		$("#beginLink").show();
+			
+		};
+
+	
+
+
+
+	function draw_visualization () {
+		if (debug)
+			console.log('drawing visualization...') ;
+
+	};
+
+
+
+
+	// <script type="text/javascript">
+		/*Width and height*/
+			var SVGwidth = 1500;
+			var SVGheight = 1000;
+
+
+
+
+
+
+			var projection = d3.geo.conicConformal()
+    .rotate([98, 0])
+    .center([0, 38])
+    .parallels([29.5, 45.5])
+    .scale(900)
+    .translate([SVGwidth /5, SVGheight /5])
+    // .precision(.1);
+			
+
+			/*Define default path generator (from MBostock and Scott Murray)*/
+
+			var path = d3.geo.path();
+
+			/*Create SVG element*/
+
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", SVGwidth)
+						.attr("height", SVGheight)
+						.attr("class","SVGMap")
+						.style("margin", "100px")
+						.style("padding", "50px");
+
+			//Load in Map data
+			d3.json("us-states.json", function(json) {
+				
+				/*Bind data to paths */
+
+				svg.selectAll("path")
+				   .data(json.features)
+				   .enter()
+				   .append("path")
+				   .attr("d", path)
+				   .style("fill", "#ccc")
+				   .attr("stroke", "#666666");
+		
+			});
+
+
+			d3.csv("StormDataTestSampleSet2.csv", function(data) {
+
+					if(debug) console.log('drawing circle');
+						var marker =
+						svg.selectAll("circle")
+						   .data(data)
+						   .enter()
+						   .append("circle")
+						   .attr("cx", function(d) {
+							   return projection([d.BEGINLON, d.BEGINLAT])[0];
+						   })
+						   .attr("cy", function(d) {
+							   return projection([ d.BEGINLON, d.BEGINLAT])[1];
+						   })
+						   .attr("r", 5)
+						   .style("fill", "#0287B2")
+						   .style("opacity", 0.75);
+
+
+					  // function svgMarker() {
+    
+
+    			// 			d3.selectAll("marker").selectAll("*").remove();
+   				// 			 d3.html("WindIconNewNoGradient.png", loadSVG);
+
+    			// 	 		function loadSVG(svgData) {
+    			// 				d3.select(svgData).selectAll("path").each(function(d) 
+    			// 						{
+      	// 						var that = this;
+      	// 						  d3.selectAll("marker").each(
+       //    							function() 
+       //    										{
+       //    								d3.select(this).node().appendChild(that.cloneNode(true));
+       //    											});
+
+							// 							});
+
+    			// 										};
+
+    												
+
+        // function svgMarker()
+    // })	   
+
+						   // .on("mouseover", function(d) {      
+    					// 	 .text(function(d) {return [d.PLACE]; });
+           					    
+	// });  
+		d3.csv("StormDataTestSampleSet2.csv", function(data) {
+		if	(debug) console.log('done drawing the circles');
+
+		});	
+
+          svg.append("text")      //text labels for filters 
+           	.attr("x", 30) 
+          	 .attr("y", 30)
+           	.style("text-anchor", "left")
+           	 .text("TORNADO", "<br>")
+            	.attr("font-size", "11px")
+            	.attr("font-weight", "bold")
+
+         svg.append("image")
+          	.attr("xlink:href", "Images/tornadoicongrey.png")
+          	.attr("x", 15)
+          	.attr("y", 20)
+          	.attr("width", 10)
+          	.attr("height", 10)
+          	.style("padding", 5)    	
+         
+          svg.append("text")      //text labels for filters 
+          	 .attr("x", 30) 
+          	 .attr("y", 50)
+          	 // .style("text-anchor", "left")
+           	 .text("SNOW")
+            	.attr("font-size", "11px")
+            	.attr("font-weight", "bold")
+
+            	
+
+          svg.append("image")
+          	.attr("xlink:href", "Images/snowflakeicon.jpg")
+          	.attr("x", 15)
+          	.attr("y", 40)
+          	.attr("width", 10)
+          	.attr("height", 10)
+          	.style("padding", 5)  
+         
+          svg.append("text")      //text labels for filters 
+          	 .attr("x", 30) 
+          	 .attr("y", 70)
+          	 // .style("text-anchor", "left")
+          	  .text("WIND")
+           	 	.attr("font-size", "11px")
+           		 .attr("font-weight", "bold")
+          svg.append("image")
+          	.attr("xlink:href", "Images/WindIconNewNoGradient.png")
+          	.attr("x", 15)
+          	.attr("y", 60)
+          	.attr("width", 10)
+          	.attr("height", 10)
+          	.style("padding", 5) 
+          
+          svg.append("text")      //text labels for filters 
+           .attr("x", 30) 
+           .attr("y", 90)
+           // .style("text-anchor", "left")
+            .text("RAIN")
+            	.attr("font-size", "11px")
+           	 	.attr("font-weight", "bold")
+
+           svg.append("image")
+          	.attr("xlink:href", "Images/loadingprogressraincloud.jpg")
+          	.attr("x", 6)
+          	.attr("y", 80)
+          	.attr("width", 25)
+          	.attr("height", 20)
+          	    
+				});		   
+			
+		
+
+
+
+
+
+
+</script>
+
+<script>
+
+// function MoreInfo() 
+
+
+// $("#NewScreen").show(function(){
+//     $(#SVGMap).after(function draw_visualization());
+// });
+
+</script>
+
+<!-- <div class="NewScreen", "MoreInfo">
+<a name="AboutStormViewer">
+
+	<h1> About StormViewer </h1>
+</a>	
+
+
+<p class="NewScreen">
+StormViewer is a data visualization project mapping storms in the US.
+
+</p>
+
+<a class="NewScreen" name="AddAStorm">
+	<h1> Add A Storm </h1>
+
+	Add a new storm to the map
+</a> -->
+	
+
+
+
+
+
+
+
+</body>
+</html>
