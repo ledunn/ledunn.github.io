@@ -1,308 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
-<html lang="en">
+
 <head>
-  <meta charset="utf-8">
+<title>
+Lauren Dunn
+</title>
 
-  <title>StormViewer</title>
-  <meta name="description" content="Storm Viewer: A Weather Data Visualization">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="StormViewer.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
-
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.js"  charset="utf-8"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	body{
+			font-family: 'Open Sans', sans-serif;
+			background: #ffffff;
+			margin-left:10px;
+			margin-right:10px;
+
+		/*#fbfaf9;*/
+		/*opacity:.6;*/
+		color:#000000;
+
+		background-color:#cccccc;
+
+		/*
+		#446383;*/
+
+		}
+
+
+	img{height:300px;
+		width:240px;
+		/*margin:10px;*/
+		/*float:left;*/
+	/*	z-index: 2;*/
+		margin-bottom:20px;
+		}
+
+	p{
+		font-size:2.4em;
+		line-height:1.5em; 
+		/*font-family:Helvetica;*/
+/*		border-bottom:solid #000000;
+*/	}	
+
+	.left{
+		float:left;
+		clear:both;
+		display:block;
+		width:250px;
+		margin:10px;
+
+	}
+
+
+
+	a:link{
+		text-decoration: none;
+		color:#000000;
+		padding:5px;
+		margin-top:5px;
+		margin-left:0px;
+		margin-right:30%;
+		line-height:1.7em;
+	}
+
+	a:hover{
+		padding:5px;
+		border-top:2px solid black;
+		border-bottom:2px solid black;
+	}
+	.header{
+		/*background: #000000; */
+		border-bottom:solid #000000;
+		/*opacity:.4;*/
+		/*#446383;*/
+		color:#1418B2;
+		margin-left:10px;
+		margin-right:10px;
+		padding-top:10px;
+		padding-right:50px;
+		padding:bottom:180px;
+		padding-left:5px;
+		font-size:.8em;
+
+	}
+
+	h2{
+		line-height:1.2em;
+		color:#000000;
+		opacity:.7;
+	}	
+
+	#hello{
+		font-size:2.5em;
+	}
+
+	.contact_info{
+		border-top:solid #000000;
+		padding-top:5px;
+		/*	margin-left:15%;
+		margin-right:15%;*/
+	}
+
+	.bio{height:300px;
+		width:500px;
+		float:left;
+		/*overflow:hidden;*/
+		margin-left:30px;
+		color:#1418B2;
+		/*opacity:.7;*/
+	}
+
+
+	.thumbnail_grid{
+		list-style-type: none;
+		display:block;
+		width:900px;
+		padding-top:300px;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+	.portfolio_thumbnails{
+		width:240px;
+		height:240px;
+		background-color:#000000;
+		color:#ffffff;
+		margin:10px 10px 10px 10px;
+		padding:5px 5px 5px 5px;
+		text-align:center;
+		font-size:2em;
+		vertical-align:middle;
+		clear:both;
+		float:left;
+		position:relative;
+		opacity:.5;
+
+		}
+
+	.portfolio_thumbnails:hover{
+		opacity:1;
+	}	
+
+	}
+</style>
+
 
 </head>
 
+
 <body>
 
+	<p>
+		Check back soon. This site is being built. 
+	</p>
 
-<div class="introText">
+<a href="StormViewerPrototype.html">StormViewer Prototype</a>
+<!-- 	<div class="header">
+	
 	<h1>
-		StormViewer
-	</h1>
+Lauren Dunn | Designer & Developer
 
-		<p class="paragraphBlurb"> 
-			is an interactive project allowing you to explore the history of storms in the United States.
-		</p>
+	</h1>	
+	
+	</div>
+	
+<div class="left">
 
+		<img src="laurendunnphoto.jpg">
 
-	<img id="loadingRaincloud" src="Images/animated-rain-clouds-raincloud.gif">
-
-
-
+		<a href="#">PORTFOLIO</a>
+		<a href="#">ABOUT</a>
 </div>
 
 
+<div class="bio">
 
-
-<!-- <div class ="navLinks"> -->
-
-
-
-	<li class="navLinks"> 
-
-	<a href="addastorm.html">ADD A STORM
-	</a>
-
-	</li>
-
-
-
-	<li class="navLinks">
-	<a href="aboutstormviewer.html">
-	ABOUT STORMVIEWER
-	</a>
-	</li>
-
-
-	<li class="navLinks">
-	<a href="moreresources.html">
-	MORE RESOURCES
-	</a>
-
-	</li>
-
-
-
-
-
-
-
-
-<!-- </div> -->
-<ul>
-<script type="text/javascript">
-
-	/**************************************************************************/
-	/**************************************************************************/
-	/************************* global variables *******************************/
-	/**************************************************************************/
-	/**************************************************************************/
-
-	var dataset ; // global variable holding our data
-	var csv_file = 'StormEventsEditedFileColumnsDeleted.csv' ;
-	var debug = true ;
-
-	/**************************************************************************/
-	/**************************************************************************/
-	/**************************************************************************/
-	/**************************************************************************/
-	/**************************************************************************/
-
-	d3.csv(csv_file, function(data) {
-
-		if ( debug )
-			console.log ( 'csv file has loaded' ) ;
-
-		dataset = data;
-
-		draw_visualization () ;
-		hide_loading_animation () ;
-	});
-
-	function hide_loading_animation () {
-		if (debug)
-			console.log('hiding animation...') ;
-
-		// hide animation
-		$(document).ready(function () {
-			$("#loadingRaincloud").hide(3000);
-		});
-
-		// show Begin link
-		$("#beginLink").show();
-			
-		};
-
-	
-
-
-
-	function draw_visualization () {
-		if (debug)
-			console.log('drawing visualization...') ;
-
-	};
-
-
-
-
-	// <script type="text/javascript">
-		/*Width and height*/
-			var SVGwidth = 1500;
-			var SVGheight = 1000;
-
-
-
-
-
-
-			var projection = d3.geo.conicConformal()
-    .rotate([98, 0])
-    .center([0, 38])
-    .parallels([29.5, 45.5])
-    .scale(900)
-    .translate([SVGwidth /5, SVGheight /5])
-    // .precision(.1);
-			
-
-			/*Define default path generator (from MBostock and Scott Murray)*/
-
-			var path = d3.geo.path();
-
-			/*Create SVG element*/
-
-			var svg = d3.select("body")
-						.append("svg")
-						.attr("width", SVGwidth)
-						.attr("height", SVGheight)
-						.attr("class","SVGMap")
-						.style("margin", "100px")
-						.style("padding", "50px");
-
-			//Load in Map data
-			d3.json("us-states.json", function(json) {
+		<p>
+			<h2 id="hello"> Hello.
+			</h2>
 				
-				/*Bind data to paths */
-
-				svg.selectAll("path")
-				   .data(json.features)
-				   .enter()
-				   .append("path")
-				   .attr("d", path)
-				   .style("fill", "#ccc")
-				   .attr("stroke", "#666666");
-		
-			});
-
-
-			d3.csv("StormDataTestSampleSet2.csv", function(data) {
-
-					if(debug) console.log('drawing circle');
-						var marker =
-						svg.selectAll("circle")
-						   .data(data)
-						   .enter()
-						   .append("circle")
-						   .attr("cx", function(d) {
-							   return projection([d.BEGINLON, d.BEGINLAT])[0];
-						   })
-						   .attr("cy", function(d) {
-							   return projection([ d.BEGINLON, d.BEGINLAT])[1];
-						   })
-						   .attr("r", 5)
-						   .style("fill", "#0287B2")
-						   .style("opacity", 0.75);
-
-
-					  // function svgMarker() {
-    
-
-    			// 			d3.selectAll("marker").selectAll("*").remove();
-   				// 			 d3.html("WindIconNewNoGradient.png", loadSVG);
-
-    			// 	 		function loadSVG(svgData) {
-    			// 				d3.select(svgData).selectAll("path").each(function(d) 
-    			// 						{
-      	// 						var that = this;
-      	// 						  d3.selectAll("marker").each(
-       //    							function() 
-       //    										{
-       //    								d3.select(this).node().appendChild(that.cloneNode(true));
-       //    											});
-
-							// 							});
-
-    			// 										};
-
-    												
-
-        // function svgMarker()
-    // })	   
-
-						   // .on("mouseover", function(d) {      
-    					// 	 .text(function(d) {return [d.PLACE]; });
-           					    
-	// });  
-		d3.csv("StormDataTestSampleSet2.csv", function(data) {
-		if	(debug) console.log('done drawing the circles');
-
-		});	
-
-          svg.append("text")      //text labels for filters 
-           	.attr("x", 30) 
-          	 .attr("y", 30)
-           	.style("text-anchor", "left")
-           	 .text("TORNADO", "<br>")
-            	.attr("font-size", "11px")
-            	.attr("font-weight", "bold")
-
-         svg.append("image")
-          	.attr("xlink:href", "Images/tornadoicongrey.png")
-          	.attr("x", 15)
-          	.attr("y", 20)
-          	.attr("width", 10)
-          	.attr("height", 10)
-          	.style("padding", 5)    	
-         
-          svg.append("text")      //text labels for filters 
-          	 .attr("x", 30) 
-          	 .attr("y", 50)
-          	 // .style("text-anchor", "left")
-           	 .text("SNOW")
-            	.attr("font-size", "11px")
-            	.attr("font-weight", "bold")
-
-            	
-
-          svg.append("image")
-          	.attr("xlink:href", "Images/snowflakeicon.jpg")
-          	.attr("x", 15)
-          	.attr("y", 40)
-          	.attr("width", 10)
-          	.attr("height", 10)
-          	.style("padding", 5)  
-         
-          svg.append("text")      //text labels for filters 
-          	 .attr("x", 30) 
-          	 .attr("y", 70)
-          	 // .style("text-anchor", "left")
-          	  .text("WIND")
-           	 	.attr("font-size", "11px")
-           		 .attr("font-weight", "bold")
-          svg.append("image")
-          	.attr("xlink:href", "Images/WindIconNewNoGradient.png")
-          	.attr("x", 15)
-          	.attr("y", 60)
-          	.attr("width", 10)
-          	.attr("height", 10)
-          	.style("padding", 5) 
-          
-          svg.append("text")      //text labels for filters 
-           .attr("x", 30) 
-           .attr("y", 90)
-           // .style("text-anchor", "left")
-            .text("RAIN")
-            	.attr("font-size", "11px")
-           	 	.attr("font-weight", "bold")
-
-           svg.append("image")
-          	.attr("xlink:href", "Images/loadingprogressraincloud.jpg")
-          	.attr("x", 6)
-          	.attr("y", 80)
-          	.attr("width", 25)
-          	.attr("height", 20)
-          	    
-				});		   
+			<p>
+				I AM: a Boston-based web designer and developer with a background in cultural anthropology. I have a passion for making information accessible to wider populations.
 			
+			</p>
+
+			<p>
+			SKILLS: HTML5, CSS3, Javascript, jQuery, Responsive Design, Version Control (Git), Adobe CS
+
+			</p>
+
+			<p>
+			LEARNING: PHP, d3.js, SASS
+			</p>
+				
+			<p>	
+			SOME OF MY PROFESSIONAL INTERESTS:		
+			Maps, Women in Technology, Data Visualization, User Experience, Negotiations of Space and Identity in Relation to Technology 
+			</p>
+
+
+			<P>
+			SOME OF MY OTHER INTERESTS:	Wine, Distilling, New England regional food history
+			</P>	
+
+			<p class="contact_info">
+				<strong> I am currently available for work. Let's chat: <br> </strong>
+				laurenelizabeth.dunn@gmail.com | 1.203.804.9229
+			</p>	
+
+		</div>	 
+
+<div class="thumbnail_grid">
+	<ul class="thumbnail_grid">
+		<li class="portfolio_thumbnails"> Service Design Project: Home Bar Consultant</li>
+		<li class="portfolio_thumbnails"> PhotoMapApp:Linking Historical Photos With Present Day Map Data</li>
+		<li class="portfolio_thumbnails"> Tyler Dunn | Hair Stylist </li>
+		<li class="portfolio_thumbnails"> 52 Pies Project </li>
+		
 		
 
 
@@ -310,38 +227,11 @@
 
 
 
-</script>
 
-<script>
+	</ul>	
 
-// function MoreInfo() 
-
-
-// $("#NewScreen").show(function(){
-//     $(#SVGMap).after(function draw_visualization());
-// });
-
-</script>
-
-<!-- <div class="NewScreen", "MoreInfo">
-<a name="AboutStormViewer">
-
-	<h1> About StormViewer </h1>
-</a>	
-
-
-<p class="NewScreen">
-StormViewer is a data visualization project mapping storms in the US.
-
-</p>
-
-<a class="NewScreen" name="AddAStorm">
-	<h1> Add A Storm </h1>
-
-	Add a new storm to the map
-</a> -->
-	
-
+</div>
+ -->
 
 
 
@@ -349,4 +239,9 @@ StormViewer is a data visualization project mapping storms in the US.
 
 
 </body>
+
+
+
+
+
 </html>
