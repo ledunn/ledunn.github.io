@@ -9,20 +9,27 @@ Lauren Dunn
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
+<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700' rel='stylesheet' type='text/css'>
+
 <style>
 
 
 	body{
-			font-family: 'Open Sans', sans-serif;
-			background: #ffffff;
+			font-family: 'Montserrat', sans-serif;
 			margin-left:10px;
 			margin-right:10px;
+
 
 		/*#fbfaf9;*/
 		/*opacity:.6;*/
 		color:#000000;
 
-		background-color:#cccccc;
+		/*background: url(http://griddle.it/960-12-30) repeat-y center top;*/
+		background-color: #F2F1ED;
 
 		/*
 		#446383;*/
@@ -30,20 +37,15 @@ Lauren Dunn
 		}
 
 
-	img{height:300px;
-		width:240px;
-		/*margin:10px;*/
-		/*float:left;*/
-	/*	z-index: 2;*/
-		margin-bottom:20px;
-		}
-
 	p{
 		font-size:2.4em;
 		line-height:1.5em; 
-		/*font-family:Helvetica;*/
+		color:#444;
+		
 /*		border-bottom:solid #000000;
 */	}	
+
+
 
 	.left{
 		float:left;
@@ -57,62 +59,175 @@ Lauren Dunn
 
 
 	a:link{
+
+		font-family:'Montserrat';
 		text-decoration: none;
-		color:#000000;
-		padding:5px;
-		margin-top:5px;
-		margin-left:0px;
-		margin-right:30%;
-		line-height:1.7em;
-	}
+		color:#999;
+		clear:both;
+	
+		-webkit-transition-property: color; 
+		-webkit-transition-duration: .6s; 
+		-webkit-transition-timing-function: ease-in;
+		
+
+		list-style-type:none;
+		display:inline; 
+	/*	list-style-position:left;
+		clear:both;
+		float:left;*/
+		padding:3px;
+		font-size:.9em;
+		text-align:left;
+		line-height:2em;
+
+
+
+		}
+
+	li{
+		list-style-type: none;
+		line-height:1.7em;}
 
 	a:hover{
-		padding:5px;
-		border-top:2px solid black;
-		border-bottom:2px solid black;
+		/*padding:3px;*/
+		/*border-top:2px solid black;*/
+		/*margin-left:25px;*/
+		color:#444;
+		/*background-color:#DE5A51;*/
+		}
+
+	a:visited{
+		text-decoration:none;
+		color:#444;
+
 	}
+
+	a:active{
+		color:#DE5A51;}	
+	
 	.header{
-		/*background: #000000; */
-		border-bottom:solid #000000;
+		
+		/*border-bottom:solid 1px #000000;*/
 		/*opacity:.4;*/
 		/*#446383;*/
-		color:#1418B2;
+		font-family:'Abril Fatface';
+		 color:#999 !important;
 		margin-left:10px;
 		margin-right:10px;
-		padding-top:10px;
+		margin-top:10px;
+		/*padding-top:10px;
 		padding-right:50px;
-		padding:bottom:180px;
+		padding:bottom:180px;*/
 		padding-left:5px;
-		font-size:.8em;
+		font-size:1em;
+
+	}
+
+	.header_text{
+		color:#444;
+		margin-left:9%;
+	}
+
+	.nav_links{
+	
+		margin-right:9%;
+
+		font-family:'Montserrat';
+		text-decoration: none;
+		color:#999;
+		clear:both;
+		float:right;
+		padding:20px 20px 20px 20px;
+
+		-webkit-transition-property: color; 
+		-webkit-transition-duration: .6s; 
+		-webkit-transition-timing-function: ease-in;
+		
+
+		list-style-type:none;
+		display:inline; 
+	
+		padding:3px;
+		font-size:1.1em;
+		text-align:left;
+		line-height:2em;
+
 
 	}
 
 	h2{
+		font-family:'Georgia';
 		line-height:1.2em;
-		color:#000000;
-		opacity:.7;
+		color:#999;
+		/*opacity:.7;*/
 	}	
 
 	#hello{
-		font-size:2.5em;
+		font-family:'Abril Fatface';
+		font-size:2.1em;
+		color:#DE5A51;
+		opacity:1;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+	}
+
+	#profilepic{
+		width:100%;
+		padding:0px;
+		margin:0px;
+		clear:both;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		/*border: 1px solid #444;*/
 	}
 
 	.contact_info{
 		border-top:solid #000000;
+		color:#DE5A51;
+		font-family:'Georgia';
+		width:100%;
 		padding-top:5px;
-		/*	margin-left:15%;
-		margin-right:15%;*/
+		font-size:1.3em;
+		text-align:left;
+
+
+
+		-webkit-transition-property: color, background-color; 
+		-webkit-transition-duration: .6s; 
+		-webkit-transition-timing-function: ease-in;
 	}
 
-	.bio{height:300px;
-		width:500px;
-		float:left;
+	.contact_info:hover{
+		color:#ffffff;
+		background-color:#DE5A51;
+
+	}
+	.bio{
+		width:50%;
+		float:none;
+		clear:both;
+	/*	float:left;*/
 		/*overflow:hidden;*/
-		margin-left:30px;
-		color:#1418B2;
+		/*padding:100px;*/
+		margin-left:auto;
+		margin-right:auto;
+		color:#000000;
 		/*opacity:.7;*/
+		text-align:left;
 	}
 
+	.bio_blurb{
+		color:#444;
+		font-size: 1em;
+		text-align: center;
+	}
+
+	.italic{
+		font-family: 'Georgia';
+		font-style:italic;
+	}
 
 	.thumbnail_grid{
 		list-style-type: none;
@@ -153,69 +268,135 @@ Lauren Dunn
 
 <body>
 
-	<p>
+<!-- 	<p>
 		Check back soon. This site is being built. 
-	</p>
+	</p> -->
 
 
-<!-- 	<div class="header">
+
+	<div class="header">
 	
-	<h1>
-Lauren Dunn | Designer & Developer
+	<p class="header_text">
+		LAUREN DUNN  <br> DESIGNER &amp; DEVELOPER
+	</p>
+	
+	<p>
+		<li class ="nav_links"> <a href="#">Portfolio</a> </li>
+		<li class="nav_links"> <a href="#">About</a> </li>
 
-	</h1>	
+	</p>	
 	
 	</div>
-	
-<div class="left">
-
-		<img src="laurendunnphoto.jpg">
-
-		<a href="#">PORTFOLIO</a>
-		<a href="#">ABOUT</a>
-</div>
 
 
-<div class="bio">
+
+
+<div class="bio">		
 
 		<p>
-			<h2 id="hello"> Hello.
+			<h2 id="hello"> Hi there! I'm Lauren
 			</h2>
 				
+
+		</p>	
+		
+  
 			<p>
-				I AM: a Boston-based web designer and developer with a background in cultural anthropology. I have a passion for making information accessible to wider populations.
+				<h2 class="bio_blurb">  I'm a designer and developer with a background in anthropology. </h2>
+			</p>
+
+					<img id="profilepic" src="images/doten_151017-9664-10.jpg">
+			
+			<p>	 
+
+				<h2> Some of my projects and interests include: </h2>
+
+				<!--insert link to grand canyon vis or storm tracker vis project here-->
+
+				<li> Taking dull and difficult-to-understand datasets and turning them into dynamic visualizations. </li>
+
+				<!--insert Photomapapp project link here -->
+				<li> Making <a href="http://dl.tufts.edu/"> digital archive </a> information more accessible through interactivity. </li>
+
+				<!--insert link to Clippers Long hill and Tyler's portfolio here-->
+
+				<li>Helping small businesses and entrepreneurs <a href="www.clipperslonghill.com">improve their web presence. </a>
+
+				</li>
 			
 			</p>
 
 			<p>
-			SKILLS: HTML5, CSS3, Javascript, jQuery, Responsive Design, Version Control (Git), Adobe CS
+			<h2> SKILLS: </h2>
+
+			 <li> HTML5, CSS3, jQuery, Responsive Design, Version Control (Git) </li>
+			 <li> Wireframing, Mockups, Adobe Photoshop </li>
 
 			</p>
 
 			<p>
-			LEARNING: PHP, d3.js, SASS
+				<h2> LEARNING: </h2>
+				  d3.js, Javascript, SASS
 			</p>
 				
+
+			<h2> EDUCATION:	</h2>
+
+
+			<p>
+
+				<!-- <h3>
+					Continuing Education (2014-Present)
+				</h3> -->
+
+
+					<h4 class="italic"> <a href="http://www.massart.edu"> Massachussetts College of Art and Design, Boston, MA </a> </h4>
+
+					<li> Web I (HTML, CSS) </li>
+					<li> Designing Interactive Experiences (Design Prototyping/Process Course)</li>
+					<li> Designing With Data </li>
+					(Course on data visualization methods including d3.js) <li>
+
+					<h4 class="italic"> <a href="http://www.smfa.edu"> School of the Museum of Fine Arts, Boston, MA </a> </h4>
+
+					<li> Graphic Design I </li>
+					<li> Intermediate Web Design (advanced CSS, jQuery, beginning Javascript)</li>
+			</p>	
+			
+
+			<p> 
+
+				<h4 class="italic"> <a href="http://www.bard.edu"> Bard College, Annandale-on-Hudson, NY </a> </h4>
+
+				 <li> B.A. Cultural Anthropology </li>  
+				
+				<li> Coursework and training in cultural theory, ethnography, fieldwork </li>
+
+				<li>Senior Thesis: Ethnographic project entitiled "Keepin' It Real: Arab American Negotiations of Identity and Space Through Hip Hop Music" </li>
+
+			</p>
+
 			<p>	
-			SOME OF MY PROFESSIONAL INTERESTS:		
-			Maps, Women in Technology, Data Visualization, User Experience, Negotiations of Space and Identity in Relation to Technology 
+				<h2> Some of my other interests: </h2>		
+			Maps, Women in Technology, Data Visualization, User Experience, Negotiations of Space and Identity in Relation to Technology
+				
 			</p>
 
 
-			<P>
+			<!-- <p>
 			SOME OF MY OTHER INTERESTS:	Wine, Distilling, New England regional food history
-			</P>	
+			</p> -->	
 
 			<p class="contact_info">
-				<strong> I am currently available for work. Let's chat: <br> </strong>
-				laurenelizabeth.dunn@gmail.com | 1.203.804.9229
+				 I am currently available for work. <br> Let's chat: <br> 
+				laurenelizabeth.dunn@gmail.com | 203.804.9229
 			</p>	
 
 		</div>	 
-
+<!-- 
 <div class="thumbnail_grid">
 	<ul class="thumbnail_grid">
-		<li class="portfolio_thumbnails"> Service Design Project: Home Bar Consultant</li>
+		<li class="portfolio_thumbnails"> Clippers Hair Salon: Before and After Site Design and Development</li>
 		<li class="portfolio_thumbnails"> PhotoMapApp:Linking Historical Photos With Present Day Map Data</li>
 		<li class="portfolio_thumbnails"> Tyler Dunn | Hair Stylist </li>
 		<li class="portfolio_thumbnails"> 52 Pies Project </li>
@@ -230,8 +411,8 @@ Lauren Dunn | Designer & Developer
 
 	</ul>	
 
-</div>
- -->
+</div> -->
+
 
 
 
