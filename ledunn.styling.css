@@ -247,6 +247,13 @@ body{
 		padding:5% 5% 5% 5%;
 	}
 
+	.bookcoversmall{
+		width:95%;
+		height:95%;
+		padding:5% 5% 5% 5%;
+	}
+
+
 	.portfolio_thumbnails:hover{
 		opacity:1;
 	}	
