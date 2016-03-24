@@ -1,7 +1,7 @@
 body{
 			font-family: 'Montserrat', sans-serif;
-			margin-left:10px;
-			margin-right:10px;
+			margin-left:15%;
+		/*	margin-right:10px;*/
 
 
 		/*#fbfaf9;*/
@@ -109,7 +109,7 @@ body{
 	.header_text{
 		font-family:'Abril Fatface';
 		color:#444;
-		margin-left:15%;
+	/*	margin-left:15%;*/
 	}
 
 	.nav_links{
@@ -152,9 +152,9 @@ body{
 		font-family:'Abril Fatface';
 		font-size:2.1em;
 		color:#DE5A51;
-		opacity:1;
+/*		opacity:1;
 		margin-left:auto;
-		margin-right:auto;
+		margin-right:auto;*/
 		text-align:center;
 	}
 
@@ -191,14 +191,14 @@ body{
 
 	}
 	.bio{
-		width:50%;
+		width:60%;
 		float:none;
 		clear:both;
 	/*	float:left;*/
 		/*overflow:hidden;*/
 		/*padding:100px;*/
-		margin-left:auto;
-		margin-right:auto;
+		margin-left:10%;
+		margin-right:10%;
 		color:#000000;
 		/*opacity:.7;*/
 		text-align:left;
@@ -241,27 +241,53 @@ body{
 
 		}*/
 
-	.portfolio_images{
-		width:35%;
-		height:30%;
-		padding:5% 5% 5% 5%;
-	}
+	
+	.screenshots{
+		width:40%;
+		height:40%;
+		padding:2% 2% 2% 2%;
+		margin-left:15%;
+		margin-right:15%;	}
+
+
+
+	.portfolio_thumbnails{
+		width:25%;
+		height:25%;
+		padding:2% 2% 2% 2%;
+	/*	vertical-align: middle;
+		text-align:center;*/
+		margin-left:10%;
+		margin-right:10%;	}
 
 	.bookcoversmall{
 		width:95%;
 		height:95%;
 		padding:5% 5% 5% 5%;
 	}
+	
+	#resume_link{font-family:'Abril Fatface';
+		font-size:2.1em;
+		color:#444;
+/*		opacity:1;
+		margin-left:auto;
+		margin-right:auto;*/
+		text-align:center;}
 
-
-	.portfolio_thumbnails:hover{
-		opacity:1;
+	#resume_link:hover{
+		color:#DE5A51;
 	}	
+
+	#resume_link:visited{color:#444;}
+
+	/*.portfolio_thumbnails:hover{
+		opacity:1;
+	}	*/
 
 	.body_text{
 		font-family:'Montserrat', sans-serif;
 		font-size:1.2em;
-		margin-left:21%;
-		margin-right:21%;
+		margin-left:15%;
+		margin-right:15%;
 	}
 	}
