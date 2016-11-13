@@ -1,6 +1,7 @@
 body{
 			font-family: 'Montserrat', sans-serif;
 			margin-left:15%;
+			margin-top: 2%;
 		/*	margin-right:10px;*/
 
 
@@ -8,7 +9,7 @@ body{
 		/*opacity:.6;*/
 		color:#444;
 
-		/*background: url(http://griddle.it/960-12-30) repeat-y center top;*/
+		background: url(http://griddle.it/960-12-30) repeat-y center top;
 		background-color: #F2F1ED;
 
 		/*
@@ -25,9 +26,11 @@ body{
 		font-family:'Montserrat', sans-serif;
 		line-height:1.2em;
 		color:#DE5A51;
-		margin-left:8%;
+
+	/*	margin-left:8%;
 		margin-right:8%;
-		/*opacity:.7;*/
+		padding: 2%;*/
+	
 	}			
 
 
@@ -37,8 +40,7 @@ body{
 		line-height:1.5em; 
 		color:#444;
 		
-		/*		border-bottom:solid #000000;
-		*/	
+			
 
 	}	
 
@@ -82,7 +84,7 @@ body{
 		}
 
 	li{
-		list-style-type: none;
+		/*list-style-type: none;*/
 		line-height:1.7em;}
 
 	a:hover{
@@ -176,7 +178,6 @@ body{
 		display:block;
 		margin-left:auto;
 		margin-right:auto;
-		/*border: 1px solid #444;*/
 	}
 
 	.contact_info{
@@ -207,8 +208,8 @@ body{
 	/*	float:left;*/
 		/*overflow:hidden;*/
 		/*padding:100px;*/
-		margin-left:10%;
-		margin-right:10%;
+		margin-left:8%;
+		margin-right:8%;
 		color:#000000;
 		/*opacity:.7;*/
 		text-align:left;
@@ -234,22 +235,7 @@ body{
 		margin-right:auto;
 
 	}
-/*	.portfolio_thumbnails{
-		width:240px;
-		height:240px;
-		background-color:#000000;
-		color:#ffffff;
-		margin:10px 10px 10px 10px;
-		padding:5px 5px 5px 5px;
-		text-align:center;
-		font-size:2em;
-		vertical-align:middle;
-		clear:both;
-		float:left;
-		position:relative;
-		opacity:.5;
 
-		}*/
 
 	
 	.screenshots{
@@ -304,4 +290,143 @@ body{
 		margin-top:8%;
 		margin-right:10%;
 	}
-	}
+
+
+@-webkit-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-moz-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes cf4FadeInOut {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+#cf4a {
+  position:relative;
+  /*height:281px;
+  width:450px;*/
+
+  height:65%;
+  width:50%;
+  margin:10% 10% 10% 10%;
+}
+#cf4a img {
+  position:absolute;
+  left:0;
+}
+
+#cf4a img {
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 10s;
+
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 10s;
+
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+#cf4a img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+#cf4a img:nth-of-type(2) {
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  -o-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+#cf4a img:nth-of-type(3) {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  -o-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#cf4a img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+/*.KGRAnimation {padding: 0px 500px 500px 1000px;}
+*/
+
+
+}
+
