@@ -1,6 +1,6 @@
 body{
 			font-family: 'Montserrat', sans-serif;
-			margin-left:15%;
+			margin-left:5%;
 			margin-top: 2%;
 		/*	margin-right:10px;*/
 
@@ -46,14 +46,14 @@ body{
 
 
 
-	.left{
+	/*.left{
 		float:left;
 		clear:both;
 		display:block;
 		width:250px;
 		margin:10px;
 
-	}
+	}*/
 
 
 
