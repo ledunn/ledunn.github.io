@@ -75,6 +75,7 @@ body{
 	/*	list-style-position:left;
 		clear:both;
 		float:left;*/
+		margin-left:10px;
 		padding:10px;
 		font-size:.9em;
 		text-align:left;
@@ -86,7 +87,8 @@ body{
 
 	li{
 		list-style-type: none;
-		line-height:1.7em;}
+		line-height:1.7em;
+		}
 
 	a:hover{
 		/*padding:3px;*/
