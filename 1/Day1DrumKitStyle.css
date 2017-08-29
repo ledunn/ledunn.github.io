@@ -17,14 +17,16 @@ body,html {
   justify-content: center;
 }
 
+
+
 .key {
   border: .4rem solid black;
   border-radius: .5rem;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 1rem; 
   font-size: 1.5rem;
-  padding: 1rem .5rem;
+  padding: 1rem .25rem .25rem;
   transition: all .07s ease;
-  width: 10rem;
+  width: 16rem;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
@@ -37,10 +39,20 @@ body,html {
   box-shadow: 0 0 1rem #ffc600;
 }
 
+
+
 kbd {
   display: block;
   font-size: 4rem;
+
 }
+
+#spacebar{
+  margin:0 auto;
+padding-left:8em;
+padding-right:8em;}
+
+
 
 .sound {
   font-size: 1.2rem;
