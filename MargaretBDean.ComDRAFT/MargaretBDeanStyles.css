@@ -111,9 +111,9 @@ li a:hover{
 
 /*CSS Responsive Image Grid W3C */
 
-* {
+/** {
     box-sizing: border-box;
-}
+}*/
 
 body {
     margin: 0; 
