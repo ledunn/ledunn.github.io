@@ -26,16 +26,13 @@ ul {
 	padding: 0;
 }
 
-li a{
+nav li a{
 	text-decoration: none;
 }
 
 li a:hover{
 	font-weight: 700;}
 
-/*li a:active{
-	font-weight: 700; background-color: red;}
-*/
 
 .active-page{
 	
