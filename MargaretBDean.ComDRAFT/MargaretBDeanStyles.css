@@ -9,10 +9,10 @@ header{
 
 header a{
 	text-decoration: none;
-	color: #386150; /*hunter green color*/}	
+	color: #386150; } /*hunter green color*/	
 
 body{
-	line-height:1.5em;
+	line-height: 1.5em;
 	background-color: #E5E5CC; /*light tan color, current background on old site*/
 	color: #453F78; /*dark slate blue */
 	font-family: 'Avenir', sans-serif;
@@ -37,7 +37,8 @@ footer {
 }
 
 li a:link{
-  font-weight: 400;
+
+font-weight: 400;
 text-decoration: none;
 color: #453F78;}
 
@@ -115,7 +116,7 @@ li a:hover{
 }
 
 body {
-    margin: 0;
+    margin: 0; 
     /*font-family: Arial;*/
 }
 
@@ -167,25 +168,22 @@ body {
   }
 
   body{
-  		font-size:1.3em;
-      width: 100%;
-      padding-left: 15%;
-/*  	background-color: green;
-*/  
+  		font-size: 1.3em;
+ 
   }
 
   nav {
-  	width:60%;
+  	width: 60%;
   	margin-left: 20%;
   	margin-right: 20%;
   	text-align: center;
   	padding: 0em 0em 0em 0em;
   	float: none;
-  	font-size:1em;
+  	font-size: 1em;
   }
 
   header, img{
-  	width:70%;
+  	width: 70%;
   	margin-left: 15%;
   	margin-right: 15%;
     font-size: 1em;
