@@ -48,7 +48,7 @@ li a:hover{
 	
 	font-weight: 700 !important;
   border-left: solid 2px !important;
-  padding: 2px 2px 2px 2px;}
+  padding: 2px 2px 2px 3px;}
 
 /*CSS animations and stylings for "Read more" and "Read less" toggle buttuons on About the Artist page*/
 .read-more-content {
