@@ -26,17 +26,28 @@ ul {
 	padding: 0;
 }
 
-nav li a{
-	text-decoration: none;
-}
+
+li a:link{
+  font-weight: 400;
+text-decoration: none;
+color: #453F78;}
 
 li a:hover{
-	font-weight: 700;}
+	font-weight: 700;
+  text-decoration: none;
+  color: #453F78;}
+
+ li a:visited{
+  font-weight: 400;
+  text-decoration: none;
+  color: #453F78;
+ } 
 
 
 .active-page{
 	
-	font-weight: 700;}
+	font-weight: 700;
+  text-decoration: underline !important;}
 
 /*CSS animations and stylings for "Read more" and "Read less" toggle buttuons on About the Artist page*/
 .read-more-content {
