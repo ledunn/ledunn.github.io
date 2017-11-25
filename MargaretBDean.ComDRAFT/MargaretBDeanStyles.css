@@ -1,7 +1,7 @@
 header{
 	font-family: 'Baskerville', serif;
 	font-style: italic;
-	margin-left: 20%;
+	margin-left: 18%;
 	margin-right: 20%;
 	width: 60%;}
 
@@ -46,8 +46,9 @@ li a:hover{
 
 .active-page{
 	
-	font-weight: 700;
-  text-decoration: underline !important;}
+	font-weight: 700 !important;
+  border-left: solid 2px !important;
+  padding: 2px 2px 2px 2px;}
 
 /*CSS animations and stylings for "Read more" and "Read less" toggle buttuons on About the Artist page*/
 .read-more-content {
