@@ -1,0 +1,168 @@
+header{
+	font-family: 'Baskerville', serif;
+	font-style: italic;
+	margin-left: 20%;
+	margin-right: 20%;
+	width: 60%;}
+
+header a{
+	text-decoration: none;
+	color: #386150; /*begonia, salmon color*/}	
+
+body{
+	line-height:1.5em;
+	background-color: #E5E5CC; /*light tan color, current background on old site*/
+	color: #453F78; /*dark slate blue */
+	font-family: 'Avenir', sans-serif;
+}
+
+nav{
+	float: left;
+	padding: 2em 2em 100em 2em;}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li a{
+	text-decoration: none;
+}
+
+li a:hover{
+	font-weight: 700;}
+
+/*li a:active{
+	font-weight: 700; background-color: red;}
+*/
+
+.active-page{
+	
+	font-weight: 700;}
+
+/*CSS animations and stylings for "Read more" and "Read less" toggle buttuons on About the Artist page*/
+.read-more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease;
+}
+
+.read-more-toggle {
+  display: none;
+}
+
+.read-more-toggle-label {
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  border: solid 1px;
+  padding: 5px;
+  margin: .5em;
+  font-size: .8em;
+  background-color: #453F78;
+  color: #ffffff;
+
+}
+
+.read-more-toggle-label:hover{
+	background-color: #FF6978;
+}
+
+.read-more-toggle-label:active{
+	background-color: #FF6978;
+}
+
+.read-more-toggle-label:after {
+  content: "More";
+  display: inline-block;
+}
+
+.read-more-toggle:checked + .read-more-content {
+  display: block;
+  /* css animation won't work with "auto"; set to some height larger
+	than the content */
+  max-height: 2000px;
+}
+
+.read-more-toggle:checked + .read-more-content + .read-more-toggle-label:after {
+  content: "Less";
+}
+
+
+/*CSS Responsive Image Grid W3C */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/*End CSS Responsive Image Grid styling W3C*/
+
+
+@media (max-width: 750px) { 
+
+  body{
+  		font-size:1.3em;
+/*  	background-color: green;
+*/  
+  }
+
+  nav {
+  	width:60%;
+  	margin-left: 20%;
+  	margin-right: 20%;
+  	text-align: center;
+  	padding: 0em 0em 0em 0em;
+  	float: none;
+  	font-size:1.2em;
+  }
+
+  header, img{
+  	width:70%;
+  	margin-left: 15%;
+  	margin-right: 15%;
+  }
+
+}

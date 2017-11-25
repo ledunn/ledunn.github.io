@@ -1,0 +1,145 @@
+<!--
+
+Lightbox image gallery
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+
+  <title>Margaret B. Dean Plein Air Artist</title>
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width" />
+  
+  <!--General Site CSS -->
+  <link rel="stylesheet" href="MargaretBDeanStyles.css">
+
+
+
+    <style type="text/css">
+        body {
+            font-family: Helvetica ;
+            line-height: 1.5em ;
+        }
+    </style>
+
+    <!-- link to fancybox CSS file -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" />
+
+</head>
+
+<body>
+
+  <header> <a href="index.html">
+
+  <h1> Margaret B. Dean</h1>
+  <h2> Plein Air Artist </h2>
+
+  </a>
+
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="abouttheartist.html">About The Artist</a></li>
+      <li><a class="active-page" href="gallery.html">Gallery</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+
+    </ul>
+
+  </nav>
+
+  <section>
+  </section>
+
+
+<div class="row" > 
+   <h3><br> Landscapes</h3>
+    <div class="column">
+    <a href="images/Landscapes/AshlawnFarm.jpg" class="fancybox" rel="gallery" title="Ashlawn Farm"><img src="images/Landscapes/AshlawnFarm.jpg" style="width:100%"/></a><br />
+    <a href="images/Landscapes/cemetaryhill.jpg" class="fancybox" rel="gallery" title="Cemetery Hill"><img src="images/Landscapes/cemetaryhill.jpg" style="width:100%"/></a><br />
+    <a href="images/Landscapes/CoralShores.jpg" class="fancybox" rel="gallery" title="Coral Shores"><img src="images/Landscapes/CoralShores.jpg" style="width:100%"/></a><br />
+
+    </div>
+
+    <div class="column">
+    <a href="images/Landscapes/earlylight.jpg" class="fancybox" rel="gallery" title="Early Light"><img src="images/Landscapes/earlylight.jpg" style="width:100%"/></a><br />
+    <a href="images/Landscapes/earlysummermarshes.jpg" class="fancybox" rel="gallery" title="Early Summer Marshes"><img src="images/Landscapes/earlysummermarshes.jpg" style="width:100%"/></a><br />
+    <a href="imagery/flowers_large_06.jpg" class="fancybox" rel="gallery" title="caption 6"><img src="imagery/flowers_small_06.jpg" style="width:100%"/></a><br />
+    </div>
+
+</div>
+
+
+<a href="imagery/flowers_large_07.jpg" class="fancybox" rel="gallery" title="caption 7"><img src="imagery/flowers_small_07.jpg" /></a><br />
+<a href="imagery/maple_tree_large.jpg" class="fancybox" rel="gallery" title="This is a maple tree."><img src="imagery/maple_tree_small.jpeg" /></a><br />
+<!-- jQuery library via Google CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- fancybox plugin installed locally -->
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.fancybox').fancybox ({
+            'nextEffect': 'none',
+            'prevEffect': 'none'
+        });
+    });
+</script>
+
+<script>
+
+</script>
+
+<script type="text/javascript" src="js/jquery.fancybox.pack.js">
+
+</script>
+
+
+
+
+<script type="text/javascript">
+    $(".fancybox")
+    .attr('rel', 'gallery')
+    .fancybox({
+        padding : 0
+    });
+
+    $(document).ready(function() {
+        $('.fancybox').fancybox({
+        'nextEffect':'none',
+        'prevEffect':'none',   
+        });
+    }); 
+
+
+
+    
+</script>
+
+<!-- instructions: -->
+<!-- http://fancyapps.com/fancybox/#instructions -->
+
+<!-- documentation: -->
+<!-- http://fancyapps.com/fancybox/#docs -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Looking for a directory of plugins? Check out these sites: -->
+<!-- + The jQuery Plugin Registry (http://plugins.jquery.com) -->
+<!-- + Unheap (http://www.unheap.com) -->
+
+<!-- How do you know if a given plugin is a good plugin? See "Signs of a poorly written jQuery plugin" by Remy Sharp: -->
+<!-- https://remysharp.com/2010/06/03/signs-of-a-poorly-written-jquery-plugin -->
+
+<!-- Write your own jQuery plugin: -->
+<!-- http://learn.jquery.com/plugins/basic-plugin-creation/ -->
+
+
+</body>
+</html>
