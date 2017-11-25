@@ -3,17 +3,23 @@ header{
 	font-style: italic;
 	margin-left: 18%;
 	margin-right: 20%;
-	width: 60%;}
+	width: 60%;
+  font-size: 1.6em;
+  line-height: 1.8em;}
 
 header a{
 	text-decoration: none;
-	color: #386150; /*begonia, salmon color*/}	
+	color: #386150; /*hunter green color*/}	
 
 body{
 	line-height:1.5em;
 	background-color: #E5E5CC; /*light tan color, current background on old site*/
 	color: #453F78; /*dark slate blue */
 	font-family: 'Avenir', sans-serif;
+}
+
+body h1{
+  line-height: 1.3em;
 }
 
 nav{
@@ -26,6 +32,9 @@ ul {
 	padding: 0;
 }
 
+footer {
+  font-size: .8em;
+}
 
 li a:link{
   font-weight: 400;
@@ -152,8 +161,14 @@ body {
 
 @media (max-width: 750px) { 
 
+  header{
+    margin-left: 15%;
+  }
+
   body{
   		font-size:1.3em;
+      width: 100%;
+      padding-left: 15%;
 /*  	background-color: green;
 */  
   }
@@ -165,13 +180,14 @@ body {
   	text-align: center;
   	padding: 0em 0em 0em 0em;
   	float: none;
-  	font-size:1.2em;
+  	font-size:1em;
   }
 
   header, img{
   	width:70%;
   	margin-left: 15%;
   	margin-right: 15%;
+    font-size: 1em;
   }
 
 }
