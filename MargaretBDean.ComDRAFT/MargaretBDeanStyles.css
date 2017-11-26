@@ -14,17 +14,25 @@ header a{
 body{
 	line-height: 1.5em;
 	background-color: #E5E5CC; /*light tan color, current background on old site*/
-	color: #453F78; /*dark slate blue */
-	font-family: 'Avenir', sans-serif;
+	font-family: serif;
 }
+
+p{font-family: Georgia;}
 
 body h1{
   line-height: 1.3em;
+  color: #453F78; /*dark slate blue */
+
+}
+
+body h3{
+  font-family: 'Avenir', sans-serif;
+    color: #453F78; /*dark slate blue */
 }
 
 nav{
 	float: left;
-	padding: 2em 2em 100em 2em;}
+	padding: 2em 2em 1000em 2em;}
 
 ul {
 	list-style-type: none;
@@ -33,7 +41,7 @@ ul {
 }
 
 footer {
-  font-size: .8em;
+  font-size: 1em;
   margin-left: 18%;
 }
 
@@ -136,6 +144,10 @@ body {
 
 .column img {
     margin-top: 12px;
+}
+
+.column img:hover{
+  opacity: .8;
 }
 
  /*Clear floats after the columns */
