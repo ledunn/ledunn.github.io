@@ -58,6 +58,8 @@ footer {
   margin-left: 18%;
 }
 
+.display_on_mobile{display: none;}
+
 li a:link{
 
 font-weight: 400;
@@ -212,6 +214,7 @@ body {
   	width: 100%;
     clear: both;
   	margin-left: 2em;
+    padding:.5em 1.2em .5em 0em;
     text-align: left;
     font-size: 1em;
     line-height: .5em;
@@ -226,5 +229,15 @@ body {
       margin-left: 2em;
       width:100%;
     }
+
+    .display_on_mobile{
+      display: inline;
+      font-size: .8em;
+      font-weight: 400;
+      margin-left: 2em;
+      padding: 1em 1em 1em 1em;
+    }
+    .hidden_on_mobile{display: none;}
+
 
 }
