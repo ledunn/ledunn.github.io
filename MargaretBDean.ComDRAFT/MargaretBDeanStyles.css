@@ -1,7 +1,7 @@
 header{
 	font-family: 'Baskerville', serif;
 	font-style: italic;
-	margin-left: 18%;
+	margin-left: 16%;
 	margin-right: 20%;
 	width: 60%;
   font-size: 1.6em;
@@ -10,6 +10,14 @@ header{
 header a{
 	text-decoration: none;
 	color: #386150; } /*hunter green color*/	
+
+#Henri_quote{
+  font-family: 'Baskerville', serif;
+  font-size: 1.6em;
+  line-height: 1.8em;
+  margin-left:18%;
+  width:75%;
+}
 
 body{
 	line-height: 1.5em;
@@ -191,20 +199,27 @@ body {
   }
 
   nav {
-  	width: 60%;
-  	margin-left: 20%;
-  	margin-right: 20%;
-  	text-align: center;
-  	padding: 0em 0em 0em 0em;
+  	clear: both;
+   /* width: 60%;
+*/  	margin-left: 2em;
+  	text-align: left;
+  	padding: .6em .6em .6em .6em;
   	float: none;
   	font-size: 1em;
   }
 
   header, img{
-  	width: 70%;
-  	margin-left: 15%;
-  	margin-right: 15%;
+  	width: 100%;
+    clear: both;
+  	margin-left: 2em;
+    text-align: left;
     font-size: 1em;
+    line-height: .5em;
   }
+
+  #Henri_quote{
+    font-size: .8em;
+    width: 100%;
+    margin-left: 2em;}
 
 }
