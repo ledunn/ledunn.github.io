@@ -56,9 +56,14 @@ ul {
 footer {
   font-size: 1em;
   margin-left: 18%;
+  text-decoration: none;
 }
 
-.display_on_mobile{display: none;}
+footer a:link{text-decoration:none;}
+
+.display_on_mobile{
+  display: none;
+  text-decoration:none;}
 
 li a:link{
 
@@ -228,6 +233,12 @@ body {
     footer{
       margin-left: 2em;
       width:100%;
+      text-decoration: none;
+    }
+
+    footer a:link{
+      text-decoration: none;
+
     }
 
     .display_on_mobile{
@@ -236,7 +247,10 @@ body {
       font-weight: 400;
       margin-left: 2em;
       padding: 1em 1em 1em 1em;
+      text-decoration: none;
     }
+
+    .display_on_mobile:link{text-decoration: none;}
     .hidden_on_mobile{display: none;}
 
 
