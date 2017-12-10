@@ -58,7 +58,7 @@ nav{
   width: 30%;
   float: left;
   clear: both;
-	padding: 2em 1em 75em 2em;}
+	padding: 2em 1em 85em 2em;}
 
  nav li{padding: .2em .2em .2em .2em;} 
 
@@ -266,6 +266,8 @@ body {
 
     }
 
+/*    footer img{ width: 100px;}
+*/
     .display_on_mobile{
       display: inline;
       font-size: .8em;
@@ -275,8 +277,17 @@ body {
       text-decoration: none;
     }
 
-    .display_on_mobile:link{text-decoration: none;}
+    .display_on_mobile img{ 
+      margin: 0px; padding: 1% 6% 6% 0%; float: left;
+      width: 25%;}
+
+     .display_on_mobile h3{font-size: .9em;} 
+
+    .display_on_mobile a:link{text-decoration: none;}
+    
     .hidden_on_mobile{display: none;}
+
+   /* .hidden_on_mobile img{ width: 100px;}*/
 
 
 }
