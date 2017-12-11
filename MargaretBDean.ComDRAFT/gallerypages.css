@@ -25,16 +25,16 @@ header a {
 
 body{
 
-  float: left;
-  clear: both;
+  /*float: left;
+  clear: both;*/
 	line-height: 1.5em;
 	background-color: #E5E5CC; /*light tan color, current background on old site*/
 	font-family: serif;
 }
 
 .body_content{
-  padding-top: 5em;
-  padding-left: 2em;
+  padding-top: 1em;
+
 }
 
 p{font-family: Georgia;}
@@ -60,7 +60,7 @@ nav{
   width: 30%;
   float: left;
   clear: both;
-	padding: 2em 1em 85em 2em;}
+	padding: 2em 0em 0em 2em;}
 
  nav li{padding: .2em .2em .2em .2em;} 
 
@@ -110,53 +110,10 @@ li a:hover{
   border-left: solid 2px !important;
   padding: 2px 2px 2px 3px;}
 
-/*CSS animations and stylings for "Read more" and "Read less" toggle buttuons on About the Artist page*/
-.read-more-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .5s ease;
-}
 
-.read-more-toggle {
-  display: none;
-}
 
-.read-more-toggle-label {
-  display: inline-block;
-  user-select: none;
-  cursor: pointer;
-  border: solid 1px;
-  padding: 5px;
-  margin: .5em;
-  font-size: .8em;
-  background-color: #453F78;
-  color: #ffffff;
 
-}
 
-.read-more-toggle-label:hover{
-	background-color: #FF6978;
-}
-
-.read-more-toggle-label:active{
-	background-color: #FF6978;
-}
-
-.read-more-toggle-label:after {
-  content: "More";
-  display: inline-block;
-}
-
-.read-more-toggle:checked + .read-more-content {
-  display: block;
-  /* css animation won't work with "auto"; set to some height larger
-	than the content */
-  max-height: 2000px;
-}
-
-.read-more-toggle:checked + .read-more-content + .read-more-toggle-label:after {
-  content: "Less";
-}
 
 
 /*CSS Responsive Image Grid W3C */
