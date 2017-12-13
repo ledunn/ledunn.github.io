@@ -204,6 +204,17 @@ body {
 }
 
  /*Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 1275px) {
+    .column {
+        width: 30%;
+    }
+
+    #Henri_quote {padding-top: 0px;}
+
+    #Henri_quote img{width: 600px;}
+}
+
+
 @media (max-width: 800px) {
     .column {
         width: 30%;
