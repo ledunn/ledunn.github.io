@@ -215,10 +215,24 @@ body {
 }
 
 
+@media (max-width: 950px) {
+    .column {
+        width: 30%;
+    }
+
+    #Henri_quote {padding-top: 0px;}
+
+    #Henri_quote img{width: 500px;}
+}
+
 @media (max-width: 800px) {
     .column {
         width: 30%;
     }
+
+    #Henri_quote {padding-top: 0px;}
+
+    #Henri_quote img{width: 400px;}
 }
 
  /*Responsive layout - makes the two columns stack on top of each other instead of next to each other */
